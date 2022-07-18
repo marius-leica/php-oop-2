@@ -3,29 +3,27 @@
 
 class Product
 {
-    protected $name;
     protected $price;
-    protected $description;
+    protected string $name;
+    protected string $description;
     protected $image;
     protected $category;
     protected $brand;
     protected $id;
 
-    public function __construct($name, $price, $description, $image, $category, $brand)
+    public function __construct($name, $price, $description, $category, $brand, $id)
     {
         $this->setName($name);
         $this->setPrice($price);
         $this->setDescription($description);
-        $this->setImage($image);
         $this->setCategory($category);
         $this->setBrand($brand);
         $this->id = uniqid();
     }
 
-    private function setId()
-    {
-        $this->id = uniqid("item_");
-    }
+
+
+
 
     /**
      * Get the value of name
